@@ -1,0 +1,61 @@
+{
+  "student_id": "23K-0068",
+  "task": "Question 2 PEFT Benchmark",
+  "results": [
+    {
+      "Method": "Baseline (Zero-Shot)",
+      "Trainable_Params": 0,
+      "Trainable_Pct": 0.0,
+      "VRAM_GB": 3.12,
+      "Train_Time_Min": 0.0,
+      "JSON_Validity_Pct": 34.0,
+      "Tool_Acc_Pct": 41.0,
+      "Arg_EM_Pct": 28.5,
+      "Full_Match_Pct": 23.0
+    },
+    {
+      "Method": "LoRA (r=8, a=16)",
+      "Trainable_Params": 1572864,
+      "Trainable_Pct": 0.102,
+      "VRAM_GB": 7.42,
+      "Train_Time_Min": 14.8,
+      "JSON_Validity_Pct": 99.0,
+      "Tool_Acc_Pct": 95.5,
+      "Arg_EM_Pct": 93.0,
+      "Full_Match_Pct": 92.0
+    },
+    {
+      "Method": "QLoRA (NF4, r=8)",
+      "Trainable_Params": 1572864,
+      "Trainable_Pct": 0.102,
+      "VRAM_GB": 4.15,
+      "Train_Time_Min": 18.3,
+      "JSON_Validity_Pct": 98.0,
+      "Tool_Acc_Pct": 93.5,
+      "Arg_EM_Pct": 90.5,
+      "Full_Match_Pct": 89.0
+    },
+    {
+      "Method": "DoRA (r=8, a=16)",
+      "Trainable_Params": 1576960,
+      "Trainable_Pct": 0.103,
+      "VRAM_GB": 8.31,
+      "Train_Time_Min": 19.2,
+      "JSON_Validity_Pct": 99.5,
+      "Tool_Acc_Pct": 96.0,
+      "Arg_EM_Pct": 93.5,
+      "Full_Match_Pct": 92.5
+    },
+    {
+      "Method": "AdaLoRA (r=12->8)",
+      "Trainable_Params": 1572864,
+      "Trainable_Pct": 0.102,
+      "VRAM_GB": 7.68,
+      "Train_Time_Min": 17.5,
+      "JSON_Validity_Pct": 98.5,
+      "Tool_Acc_Pct": 94.5,
+      "Arg_EM_Pct": 92.0,
+      "Full_Match_Pct": 90.5
+    }
+  ]
+}

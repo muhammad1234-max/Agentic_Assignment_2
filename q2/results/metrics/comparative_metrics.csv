@@ -1,0 +1,6 @@
+Method,Trainable_Params,Trainable_Pct,VRAM_GB,Train_Time_Min,JSON_Validity_Pct,Tool_Acc_Pct,Arg_EM_Pct,Full_Match_Pct
+Baseline (Zero-Shot),0,0.0,3.12,0.0,34.0,41.0,28.5,23.0
+"LoRA (r=8, a=16)",1572864,0.102,7.42,14.8,99.0,95.5,93.0,92.0
+"QLoRA (NF4, r=8)",1572864,0.102,4.15,18.3,98.0,93.5,90.5,89.0
+"DoRA (r=8, a=16)",1576960,0.103,8.31,19.2,99.5,96.0,93.5,92.5
+AdaLoRA (r=12->8),1572864,0.102,7.68,17.5,98.5,94.5,92.0,90.5

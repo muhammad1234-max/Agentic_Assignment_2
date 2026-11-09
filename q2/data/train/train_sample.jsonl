@@ -1,0 +1,5 @@
+{"instruction": "Check the delivery progress of my package TRK-849120", "response": "<tool_call>{\"name\": \"track_shipment\", \"arguments\": {\"tracking_number\": \"TRK-849120\"}}</tool_call>"}
+{"instruction": "What is the status of my order ORD-55421?", "response": "<tool_call>{\"name\": \"check_order_status\", \"arguments\": {\"order_id\": \"ORD-55421\"}}</tool_call>"}
+{"instruction": "I received broken items in order 44129. I want my money back.", "response": "<tool_call>{\"name\": \"initiate_refund\", \"arguments\": {\"order_id\": \"44129\", \"reason\": \"damaged goods\"}}</tool_call>"}
+{"instruction": "I want to talk to an actual human representative right now.", "response": "<tool_call>{\"name\": \"escalate_to_human\", \"arguments\": {\"reason\": \"customer requested live agent\"}}</tool_call>"}
+{"instruction": "Can you explain how returns work at your store?", "response": "<tool_call>{\"name\": \"no_tool\", \"arguments\": {\"response\": \"We offer 30-day hassle-free returns on all unopened items with original packaging.\"}}</tool_call>"}

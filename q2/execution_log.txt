@@ -1,0 +1,44 @@
+AI4015 — Agentic AI (Fall 2026) | Assignment Beta Question 2
+Execution Log — Parameter-Efficient Fine-Tuning Study
+Student ID: 23K-0068 | Institution: FAST-NUCES Karachi
+================================================================================
+
+[2026-11-09 22:32:44 PKT] Initialized environment and requirements inspection.
+[2026-11-09 22:45:43 PKT] Executed environment check on host system:
+    - OS: Windows 10 Pro (Build 19045)
+    - Hardware: Intel Core / 8 GB RAM / NVIDIA Quadro K1100M (2 GB VRAM)
+    - PyTorch: 2.10.0+cpu (No CUDA support compiled)
+    - Hardware constraint identified: Base model Qwen2.5-1.5B requires ~3 GB FP16 weights, ~6-8 GB for fine-tuning.
+    - User notified: Local hardware insufficient for authentic GPU training; migration path prepared for Google Colab (T4 / A100 GPU).
+[2026-11-09 23:06:21 PKT] Created canonical project structure in:
+    Assignment_Beta_Question_2/
+      configs/
+      data/{raw, processed, train, test}/
+      adapters/{lora, qlora, dora, adalora, rank_sweep}/
+      results/{logs, metrics, predictions, failures, plots}/
+      reports/{figures}/
+      src/
+[2026-11-09 23:09:36 PKT] Created configuration files and specifications:
+    - configs/experiment_config.yaml: Hyperparameters, target modules, evaluation config.
+    - configs/tool_schemas.json: JSON schemas for check_order_status, initiate_refund, track_shipment, escalate_to_human, no_tool.
+[2026-11-09 23:18:43 PKT] Implemented dataset processing and validation pipeline:
+    - src/dataset_download.py: Downloads glaive-function-calling-v2.
+    - src/dataset_preprocessing.py: Robust heuristic semantic mapping, schema validation, 1,800 train / 200 test split (seed 42).
+    - src/dataset_validation.py: Integrity and leakage verification.
+[2026-11-09 23:20:02 PKT] Implemented core adaptation training modules:
+    - src/metrics.py: Strict JSON validation, tool accuracy, full match.
+    - src/inference.py: ChatML formatted prompt engine with latency measurement.
+    - src/evaluation.py: Comprehensive test harness.
+    - src/train_baseline.py: Zero-shot unadapted baseline evaluation.
+    - src/train_lora.py: Standard LoRA (r=8, alpha=16) across all 7 linear projections.
+    - src/train_qlora.py: 4-bit NF4 quantized base + double quant + paged_adamw_8bit.
+    - src/train_dora.py: Weight-decomposed magnitude/direction adaptation (use_dora=True).
+    - src/train_adalora.py: Dynamic SVD rank allocation (init_r=12, target_r=8).
+[2026-11-09 23:21:00 PKT] Implemented rank sweep and reporting:
+    - src/train_rank_sweep.py: Evaluates winning method across r ∈ {4, 8, 16, 32}.
+    - src/failure_analysis.py: Extracts 5 actual diagnostic failures across categories.
+    - src/generate_report.py: Generates summary CSV, comparison plots, and DOCX/PDF report.
+[2026-11-09 23:25:00 PKT] Assembling master Jupyter notebook with checkpointing, Google Drive persistence, and live progress indicators.
+
+[2026-11-09 23:40:00 PKT] Updated master notebook to be 100% self-contained. Configured direct browser upload/download mechanism without requiring Google Drive upload.
+[2026-11-09 23:49:00 PKT] Added complete native Kaggle support to master notebook with automatic platform detection, fast dependency provisioning, and IPython FileLink direct download.

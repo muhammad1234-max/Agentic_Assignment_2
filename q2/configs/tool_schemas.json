@@ -1,0 +1,85 @@
+{
+  "tools": [
+    {
+      "name": "check_order_status",
+      "description": "Check the current status of a customer order (e.g., processing, shipped, delivered, cancelled).",
+      "required_arguments": {
+        "order_id": {
+          "type": "string",
+          "description": "The unique identifier for the order (e.g., 'ORD-12345')."
+        }
+      },
+      "optional_arguments": {},
+      "argument_types": {
+        "order_id": "string"
+      }
+    },
+    {
+      "name": "initiate_refund",
+      "description": "Initiate a refund for a customer order. Requires a reason for the refund request.",
+      "required_arguments": {
+        "order_id": {
+          "type": "string",
+          "description": "The unique identifier for the order to refund (e.g., 'ORD-12345')."
+        },
+        "reason": {
+          "type": "string",
+          "description": "The reason for the refund (e.g., 'defective product', 'wrong item', 'changed mind')."
+        }
+      },
+      "optional_arguments": {},
+      "argument_types": {
+        "order_id": "string",
+        "reason": "string"
+      }
+    },
+    {
+      "name": "track_shipment",
+      "description": "Track the shipping status and location of a customer's order shipment.",
+      "required_arguments": {
+        "order_id": {
+          "type": "string",
+          "description": "The unique identifier for the order to track (e.g., 'ORD-12345')."
+        }
+      },
+      "optional_arguments": {},
+      "argument_types": {
+        "order_id": "string"
+      }
+    },
+    {
+      "name": "escalate_to_human",
+      "description": "Escalate the current customer issue to a human support agent for further assistance.",
+      "required_arguments": {
+        "issue_summary": {
+          "type": "string",
+          "description": "A brief summary of the customer's issue that needs human attention."
+        }
+      },
+      "optional_arguments": {
+        "customer_id": {
+          "type": "string",
+          "description": "The customer's unique identifier for agent reference."
+        }
+      },
+      "argument_types": {
+        "issue_summary": "string",
+        "customer_id": "string"
+      }
+    },
+    {
+      "name": "no_tool",
+      "description": "No tool invocation needed. The assistant responds directly without calling any function.",
+      "required_arguments": {},
+      "optional_arguments": {},
+      "argument_types": {}
+    }
+  ],
+  "metadata": {
+    "schema_version": "1.0",
+    "domain": "e-commerce_customer_support",
+    "total_tools": 5,
+    "project": "PEFT Comparison Experiment — AI4015 Agentic AI",
+    "student_id": "23K-0068"
+  }
+}

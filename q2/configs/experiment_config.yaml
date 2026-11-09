@@ -1,0 +1,137 @@
+# =============================================================================
+# PEFT Experiment Configuration — AI4015 Agentic AI (Fall 2026)
+# Student: 23K-0068, FAST-NUCES Karachi
+# Comparing LoRA, QLoRA, DoRA, AdaLoRA on Qwen2.5-1.5B-Instruct
+# =============================================================================
+
+# --- Base Model ---
+model:
+  name: "Qwen/Qwen2.5-1.5B-Instruct"
+  revision: "main"
+  trust_remote_code: true
+  torch_dtype: "bfloat16"  # bf16 for LoRA/DoRA/AdaLoRA; overridden for QLoRA
+
+# --- Dataset ---
+dataset:
+  source: "glaiveai/glaive-function-calling-v2"
+  total_samples: 2000        # sampled from filtered/mapped data
+  train_samples: 1800
+  test_samples: 200
+  seed: 42
+  max_seq_length: 512        # max token length per example
+  tool_schema_path: "configs/tool_schemas.json"
+
+# --- Permitted E-commerce Tools ---
+tools:
+  - check_order_status
+  - initiate_refund
+  - track_shipment
+  - escalate_to_human
+  - no_tool                  # class for conversations with no function call
+
+# --- Training Hyperparameters (shared across methods) ---
+training:
+  num_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 4   # effective batch size = 4 * 4 = 16
+  learning_rate: 2.0e-4
+  weight_decay: 0.01
+  warmup_ratio: 0.03
+  lr_scheduler_type: "cosine"
+  max_grad_norm: 1.0
+  fp16: false
+  bf16: true
+  logging_steps: 10
+  eval_strategy: "epoch"
+  save_strategy: "epoch"
+  save_total_limit: 2
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  report_to: "none"               # disable wandb in Colab
+  seed: 42
+  dataloader_num_workers: 2
+  remove_unused_columns: false
+  optim: "adamw_torch"
+
+# --- PEFT Method Configurations ---
+peft_methods:
+
+  lora:
+    method: "lora"
+    r: 16                          # default rank (swept below)
+    lora_alpha: 32                 # alpha = 2 * r is a good default
+    lora_dropout: 0.05
+    target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+    bias: "none"
+    task_type: "CAUSAL_LM"
+
+  qlora:
+    method: "qlora"
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+    bias: "none"
+    task_type: "CAUSAL_LM"
+    # Quantization settings (NF4 + double quantization)
+    quantization:
+      load_in_4bit: true
+      bnb_4bit_quant_type: "nf4"
+      bnb_4bit_compute_dtype: "bfloat16"
+      bnb_4bit_use_double_quant: true
+
+  dora:
+    method: "dora"
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+    bias: "none"
+    task_type: "CAUSAL_LM"
+    use_dora: true                 # weight-decomposed low-rank adaptation
+
+  adalora:
+    method: "adalora"
+    init_r: 16                     # initial rank before pruning
+    target_r: 8                    # target rank after importance-based pruning
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+    bias: "none"
+    task_type: "CAUSAL_LM"
+    beta1: 0.85
+    beta2: 0.85
+    deltaT: 10                    # rank reallocation interval (steps)
+    orth_reg_weight: 0.5          # orthogonality regularization
+
+# --- Rank Sweep ---
+rank_sweep:
+  ranks: [4, 8, 16, 32, 64]
+  # alpha is set to 2*r for each rank value
+  default_method: "lora"           # method used for the rank ablation study
+
+# --- Evaluation ---
+evaluation:
+  metrics:
+    - tool_selection_accuracy       # correct tool chosen
+    - argument_extraction_f1        # argument key-value match
+    - exact_match                   # full output matches ground truth exactly
+    - tool_distribution_analysis    # per-tool precision/recall
+  generation:
+    max_new_tokens: 256
+    temperature: 0.1               # near-greedy for evaluation
+    top_p: 0.9
+    do_sample: false               # greedy decoding for deterministic eval
+    repetition_penalty: 1.1
+
+# --- Paths ---
+paths:
+  raw_data: "data/raw/"
+  processed_train: "data/train/"
+  processed_test: "data/test/"
+  dataset_manifest: "data/dataset_manifest.json"
+  checkpoints: "results/checkpoints/"
+  logs: "results/logs/"
+  figures: "results/figures/"
+  final_report: "results/report/"

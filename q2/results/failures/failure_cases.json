@@ -1,0 +1,87 @@
+[
+  {
+    "case_id": 1,
+    "failure_type": "Tool Misclassification under Ambiguous Intent",
+    "user_input": "Can someone help me? My package was supposed to arrive yesterday and I want to know where it is or just give me my money back!",
+    "gold_label": {
+      "tool": "escalate_to_human",
+      "arguments": {
+        "reason": "ambiguous refund or tracking request"
+      }
+    },
+    "predicted": {
+      "tool": "initiate_refund",
+      "arguments": {
+        "order_id": ""
+      }
+    },
+    "root_cause": "LoRA over-weighted keyword money back ignoring tracking clause"
+  },
+  {
+    "case_id": 2,
+    "failure_type": "Malformed JSON with Unescaped Quotes",
+    "user_input": "Track order with tracking code TRK-9901-XYZ",
+    "gold_label": {
+      "tool": "track_shipment",
+      "arguments": {
+        "tracking_number": "TRK-9901-XYZ"
+      }
+    },
+    "predicted": "{\"name\": \"track_shipment\", \"arguments\": {\"tracking_number\": \"TRK-9901-XYZ\", \"notes\": \"urgent\"}}",
+    "root_cause": "Baseline zero-shot emitted invalid JSON with raw nested quotes"
+  },
+  {
+    "case_id": 3,
+    "failure_type": "Hallucinated Parameter Key",
+    "user_input": "Check status for order 98721",
+    "gold_label": {
+      "tool": "check_order_status",
+      "arguments": {
+        "order_id": "98721"
+      }
+    },
+    "predicted": {
+      "tool": "check_order_status",
+      "arguments": {
+        "id": "98721"
+      }
+    },
+    "root_cause": "Parameter alias drift id instead of order_id"
+  },
+  {
+    "case_id": 4,
+    "failure_type": "False-Positive Tool Trigger on Conversational Query",
+    "user_input": "What are your business hours on weekends?",
+    "gold_label": {
+      "tool": "no_tool",
+      "arguments": {
+        "response": "We operate 24/7 online support."
+      }
+    },
+    "predicted": {
+      "tool": "escalate_to_human",
+      "arguments": {
+        "department": "support"
+      }
+    },
+    "root_cause": "Model unnecessarily triggered fallback tool instead of pure dialogue"
+  },
+  {
+    "case_id": 5,
+    "failure_type": "Required Argument Omission",
+    "user_input": "I want to refund my shoes",
+    "gold_label": {
+      "tool": "escalate_to_human",
+      "arguments": {
+        "reason": "missing order_id for refund request"
+      }
+    },
+    "predicted": {
+      "tool": "initiate_refund",
+      "arguments": {
+        "reason": "shoes"
+      }
+    },
+    "root_cause": "Omitted mandatory order_id violating tool schema"
+  }
+]
