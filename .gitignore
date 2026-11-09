@@ -1,0 +1,20 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Environment and sensitive keys
+.env
+.env.local
+*.env
+
+# Python cache and temporary files
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.pytest_cache/
+
+# OS artifacts
+Thumbs.db
+.DS_Store

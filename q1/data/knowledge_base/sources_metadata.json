@@ -1,0 +1,53 @@
+[
+  {
+    "document_id": "KB_DOC_001",
+    "title": "National Heatwave Preparedness and Response Guidelines",
+    "authority": "National Disaster Management Authority (NDMA), Government of Pakistan",
+    "source_url": "https://www.ndma.gov.pk/guidelines/heatwave-preparedness",
+    "publication_date": "2024-04-15",
+    "date_retrieved": "2026-11-09",
+    "filename": "ndma_heatwave_guidelines_pakistan.txt",
+    "topics": ["heatwave", "vulnerable groups", "heat exhaustion", "heatstroke", "first aid", "emergency numbers"]
+  },
+  {
+    "document_id": "KB_DOC_002",
+    "title": "Technical Advisory: Heatwave Definition, Thresholds, and Early Warning for Karachi",
+    "authority": "Pakistan Meteorological Department (PMD), Government of Pakistan",
+    "source_url": "https://www.pmd.gov.pk/heatwave-advisory-karachi",
+    "publication_date": "2024-05-10",
+    "date_retrieved": "2026-11-09",
+    "filename": "pmd_heatwave_classification_advisory.txt",
+    "topics": ["Karachi climate", "sea breeze", "heatwave thresholds", "relative humidity", "alert levels"]
+  },
+  {
+    "document_id": "KB_DOC_003",
+    "title": "Standard Operating Procedures (SOPs) for Prevention and Clinical Management of Heatstroke",
+    "authority": "Health Department, Government of Sindh",
+    "source_url": "https://sindhhealth.gov.pk/heatstroke-sops-karachi",
+    "publication_date": "2024-05-18",
+    "date_retrieved": "2026-11-09",
+    "filename": "sindh_health_dept_heatstroke_sop.txt",
+    "topics": ["hospital response", "schools", "outdoor laborers", "hydration", "heatstroke centers"]
+  },
+  {
+    "document_id": "KB_DOC_004",
+    "title": "Technical Fact Sheet: Heatwaves and Health - Risk Reduction and Advice for the Public",
+    "authority": "World Health Organization (WHO)",
+    "source_url": "https://www.who.int/news-room/fact-sheets/detail/heatwaves-and-health",
+    "publication_date": "2024-06-01",
+    "date_retrieved": "2026-11-09",
+    "filename": "who_heatwaves_public_health_factsheet.txt",
+    "topics": ["physiology", "indoor cooling", "hydration", "elderly care", "medical emergencies"]
+  },
+  {
+    "document_id": "KB_DOC_005",
+    "title": "Public Health Advisory: Combined Health Risks of Air Pollution (PM2.5/PM10) and High Temperatures",
+    "authority": "Sindh Environmental Protection Agency (SEPA) & WHO Air Quality Guidelines",
+    "source_url": "https://epasindh.gov.pk/air-quality-standards",
+    "publication_date": "2023-11-20",
+    "date_retrieved": "2026-11-09",
+    "filename": "sindh_epa_urban_air_quality_advisory.txt",
+    "topics": ["PM2.5", "PM10", "asthma", "outdoor exercise", "Sea View jogging", "vulnerable lungs"]
+  }
+]
+

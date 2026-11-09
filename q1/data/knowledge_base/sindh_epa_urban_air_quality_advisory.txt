@@ -1,0 +1,20 @@
+SINDH ENVIRONMENTAL PROTECTION AGENCY (SEPA) & WHO GUIDELINES
+PUBLIC HEALTH ADVISORY: COMBINED HEALTH RISKS OF AIR POLLUTION (PM2.5 / PM10) AND HIGH TEMPERATURES IN URBAN KARACHI
+
+1. Particulate Matter Overview and Standards:
+- PM2.5 (Fine Particulate Matter <= 2.5 micrometers): Deeply penetrable into the pulmonary alveoli and enters the bloodstream. Sources in Karachi include vehicular combustion, industrial emissions (Korangi, SITE, Port Qasim), open waste burning, and construction dust.
+- PM10 (Coarse Inhalable Particles <= 10 micrometers): Irritates the upper respiratory tract, eyes, and throat. Heavy levels exacerbated by sea spray particles, windborne soil, and desert dust.
+- WHO Global Air Quality Guidelines: 24-hour mean PM2.5 threshold is 15 ug/m3; PM10 threshold is 45 ug/m3.
+- Sindh Environmental Quality Standards (SEQS): 24-hour PM2.5 limit is 35 ug/m3; PM10 limit is 150 ug/m3.
+
+2. Synergistic Impact of Air Pollution and Extreme Heat:
+When high ambient temperature coincides with elevated PM2.5 and PM10 concentrations, the physiological cardiovascular and respiratory strain compounds multiplicatively.
+- High thermal stress causes increased inhalation rates and dilated peripheral blood vessels, accelerating the uptake of ultrafine particulate matter into the systemic circulation.
+- Asthma patients, chronic obstructive pulmonary disease (COPD) sufferers, young children, and elderly citizens experience acute bronchial constriction, reduced lung function, and heightened risk of cardiac arrest.
+
+3. Actionable Precautions for Karachi Citizens:
+- If PM2.5 exceeds 50 ug/m3 or air quality index indicates unhealthy air, sensitive individuals should avoid strenuous outdoor activities, jogging, and outdoor sports, especially along heavily trafficked arterial roads (e.g., Shahrah-e-Faisal, Mauripur Road).
+- Evening seaside jogging (Clifton, Sea View): Even near the coastline, localized vehicular traffic and coastal inversion layers can trap particulates. Vulnerable individuals should exercise indoors during high AQI or stagnant wind conditions.
+- Wear certified N95 or well-fitted particulate masks when traveling through industrial or high-traffic corridors during haze episodes.
+- Keep inhalers and prescribed respiratory medications readily accessible.
+

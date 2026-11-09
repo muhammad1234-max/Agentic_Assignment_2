@@ -1,0 +1,19 @@
+PAKISTAN METEOROLOGICAL DEPARTMENT (PMD)
+GOVERNMENT OF PAKISTAN - NATIONAL WEATHER FORECASTING CENTRE
+TECHNICAL ADVISORY: HEATWAVE DEFINITION, THRESHOLDS, AND EARLY WARNING FOR KARACHI
+
+1. Meteorological Criteria for Heatwaves in Coastal Areas (Karachi):
+Unlike continental plains, Karachi's coastal bioclimatic stress is governed by the interplay between ambient temperature and maritime humidity from the Arabian Sea.
+- When the sea breeze ceases due to continental low-pressure systems or tropical depressions, north to north-westerly dry, continental desert winds dominate.
+- A heatwave condition in Karachi is officially declared when the maximum daily temperature equals or exceeds 40°C (104°F) for consecutive days, or when ambient temperature exceeds 37°C accompanied by high relative humidity (above 60-70%), driving the apparent heat index above 45°C.
+
+2. Seasonal Timing and Maritime Wind Reversal:
+- The peak vulnerability window occurs in pre-monsoon May-June and post-monsoon September-October.
+- Citizens and municipal administrations should monitor daily bulletins regarding changes in wind direction, specifically the cut-off of the sea breeze.
+- During high humidity and stagnant air, the human body's ability to dissipate heat through sweat evaporation is compromised, leading to elevated wet-bulb globe temperatures.
+
+3. Municipal Alert Levels:
+- Yellow Alert (Caution): Temperatures between 37°C and 39°C with moderate humidity. Citizens advised to avoid strenuous midday exercise.
+- Orange Alert (Severe Caution): Temperatures reaching 40°C or heat index exceeding 42°C. School timings should be adjusted; outdoor construction should pause during peak hours.
+- Red Alert (Emergency): Temperatures exceeding 42°C or heat index above 50°C. Emergency cooling centers operational; public water stations activated.
+

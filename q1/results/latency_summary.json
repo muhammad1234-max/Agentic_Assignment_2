@@ -1,0 +1,161 @@
+{
+  "generated_at": "2026-11-10T01:18:50.486943+05:00",
+  "experiment_status": "COMPLETE \u2014 ALL EXPERIMENT REQUIREMENTS SATISFIED",
+  "is_complete": true,
+  "validation_reasons": [],
+  "student_parameters": {
+    "student_id": "23K-0068",
+    "r_val": 68,
+    "d_val": 9,
+    "normal_daily_queries_q": 3200,
+    "llm_calls_per_query_n": 5,
+    "tool_failure_probability_p": 0.13,
+    "heatwave_days_per_month_h": 4,
+    "monthly_budget_usd_b": 1880,
+    "end_to_end_latency_target_sec_t": 8.0
+  },
+  "geographic_parameters": {
+    "city": "Karachi",
+    "country": "Pakistan",
+    "latitude": 24.8607,
+    "longitude": 67.0011,
+    "timezone": "Asia/Karachi"
+  },
+  "experiment_dates": [
+    "2026-11-09",
+    "2026-11-10"
+  ],
+  "sample_counts": {
+    "successful_by_tool": {
+      "OpenAQ": 20,
+      "Open-Meteo": 20,
+      "HeatIndex": 20,
+      "KnowledgeBase": 20
+    },
+    "failed_by_tool": {
+      "OpenAQ": 20,
+      "Open-Meteo": 0,
+      "HeatIndex": 0,
+      "KnowledgeBase": 0
+    },
+    "total_raw_rows": 121
+  },
+  "per_tool_statistics": {
+    "Open-Meteo": {
+      "tool_name": "Open-Meteo",
+      "sample_count": 20,
+      "failed_count": 0,
+      "mean_ms": 130.406,
+      "median_ms": 131.425,
+      "std_dev_ms": 4.521,
+      "min_ms": 123.936,
+      "max_ms": 142.086,
+      "p90_ms": 134.186,
+      "p95_ms": 135.033,
+      "mean_sec": 0.1304,
+      "median_sec": 0.1314,
+      "p95_sec": 0.135
+    },
+    "HeatIndex": {
+      "tool_name": "HeatIndex",
+      "sample_count": 20,
+      "failed_count": 0,
+      "mean_ms": 0.023,
+      "median_ms": 0.021,
+      "std_dev_ms": 0.009,
+      "min_ms": 0.013,
+      "max_ms": 0.045,
+      "p90_ms": 0.035,
+      "p95_ms": 0.037,
+      "mean_sec": 0.0,
+      "median_sec": 0.0,
+      "p95_sec": 0.0
+    },
+    "KnowledgeBase": {
+      "tool_name": "KnowledgeBase",
+      "sample_count": 20,
+      "failed_count": 0,
+      "mean_ms": 0.07,
+      "median_ms": 0.067,
+      "std_dev_ms": 0.021,
+      "min_ms": 0.038,
+      "max_ms": 0.114,
+      "p90_ms": 0.099,
+      "p95_ms": 0.109,
+      "mean_sec": 0.0001,
+      "median_sec": 0.0001,
+      "p95_sec": 0.0001
+    },
+    "OpenAQ": {
+      "tool_name": "OpenAQ",
+      "sample_count": 20,
+      "failed_count": 20,
+      "mean_ms": 486.739,
+      "median_ms": 524.357,
+      "std_dev_ms": 199.16,
+      "min_ms": 274.414,
+      "max_ms": 690.811,
+      "p90_ms": 686.141,
+      "p95_ms": 686.493,
+      "mean_sec": 0.4867,
+      "median_sec": 0.5244,
+      "p95_sec": 0.6865
+    }
+  },
+  "pooled_tool_latency": {
+    "pooled_median_ms": 62.025,
+    "pooled_median_sec": 0.062,
+    "total_observations_pooled": 80,
+    "all_required_tools_represented": true,
+    "derivation": "median(all valid measured OpenAQ, Open-Meteo, HeatIndex, KnowledgeBase samples)",
+    "integrity_notice": "Fully compliant with all 4 tool types represented."
+  },
+  "retry_delay_budget": {
+    "llm_calls_n": 5,
+    "failure_probability_p": 0.13,
+    "initial_tool_operations": 4,
+    "expected_tool_retries": 0.52,
+    "expected_total_tool_attempts": 4.52,
+    "base_tool_delay_sec": 0.248,
+    "retry_tool_delay_sec": 0.0322,
+    "total_tool_delay_sec": 0.2802
+  },
+  "candidate_models_evaluation": [
+    {
+      "model_name": "Mistral Small 4 (`mistral-small-2603`)",
+      "provider": "Mistral AI Studio",
+      "ttft_sec": 0.84,
+      "tokens_per_sec": 173.0,
+      "base_llm_sec": 15.7607,
+      "retry_llm_sec": 1.4888,
+      "total_llm_sec": 17.2495,
+      "base_tool_delay_sec": 0.248,
+      "retry_tool_delay_sec": 0.0322,
+      "total_tool_delay_sec": 0.2802,
+      "expected_e2e_sec": 17.5298,
+      "target_sec": 8.0,
+      "meets_target": false,
+      "slack_sec": -9.53,
+      "revised_architecture_sec": 3.1605,
+      "revised_meets_target": true
+    },
+    {
+      "model_name": "Google Gemini 4 Argon (`gemini-4-argon`)",
+      "provider": "Google DeepMind / Google Cloud",
+      "ttft_sec": 40.21,
+      "tokens_per_sec": 71.0,
+      "base_llm_sec": 229.219,
+      "retry_llm_sec": 23.4726,
+      "total_llm_sec": 252.6916,
+      "base_tool_delay_sec": 0.248,
+      "retry_tool_delay_sec": 0.0322,
+      "total_tool_delay_sec": 0.2802,
+      "expected_e2e_sec": 252.9718,
+      "target_sec": 8.0,
+      "meets_target": false,
+      "slack_sec": -244.972,
+      "revised_architecture_sec": 45.0218,
+      "revised_meets_target": false
+    }
+  ]
+}

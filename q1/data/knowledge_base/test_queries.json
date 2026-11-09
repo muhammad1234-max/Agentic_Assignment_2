@@ -1,0 +1,143 @@
+[
+  {
+    "query_id": "KB_Q01",
+    "day": 1,
+    "language": "Roman Urdu",
+    "category": "child_safety",
+    "query_text": "Din 12 bajy garmi mein bachon ko school se wapis latay waqt kya hifazati tadabeer ikhtiyar karein?"
+  },
+  {
+    "query_id": "KB_Q02",
+    "day": 1,
+    "language": "English",
+    "category": "heat_exhaustion_symptoms",
+    "query_text": "What are the early warning symptoms and signs of heat exhaustion during high humidity?"
+  },
+  {
+    "query_id": "KB_Q03",
+    "day": 1,
+    "language": "Roman Urdu",
+    "category": "heatstroke_signs",
+    "query_text": "Heatstroke ki alamat kya hain aur jab jism ka darja hararat 104F tak pohnch jaye toh kya karna chahiye?"
+  },
+  {
+    "query_id": "KB_Q04",
+    "day": 1,
+    "language": "English",
+    "category": "elderly_care",
+    "query_text": "What specific precautions should be taken for elderly people taking blood pressure or heart medications during extreme heat?"
+  },
+  {
+    "query_id": "KB_Q05",
+    "day": 1,
+    "language": "Roman Urdu",
+    "category": "outdoor_laborers",
+    "query_text": "Dhoop mein kaam karne walay mazdooron aur construction workers ke liye break aur pani peenay ke official SOPs kya hain?"
+  },
+  {
+    "query_id": "KB_Q06",
+    "day": 1,
+    "language": "Roman Urdu",
+    "category": "asthma_air_pollution",
+    "query_text": "Karachi mein jab PM2.5 aur PM10 aloodgi barh jaye toh asthma aur dama ke mareezon ko kya hidayat hain?"
+  },
+  {
+    "query_id": "KB_Q07",
+    "day": 1,
+    "language": "English",
+    "category": "hydration_guidance",
+    "query_text": "How much water and oral rehydration salts (ORS) should an adult consume daily during a Karachi heatwave?"
+  },
+  {
+    "query_id": "KB_Q08",
+    "day": 1,
+    "language": "Roman Urdu",
+    "category": "outdoor_exercise_beach",
+    "query_text": "Kya shadeed garmi aur smog mein Clifton ya Sea View par shaam ko jogging aur exercise karna mehfooz hai?"
+  },
+  {
+    "query_id": "KB_Q09",
+    "day": 1,
+    "language": "English",
+    "category": "school_precautions",
+    "query_text": "What are the government directives regarding school timings, morning assemblies, and ventilation during orange heat alerts?"
+  },
+  {
+    "query_id": "KB_Q10",
+    "day": 1,
+    "language": "Roman Urdu",
+    "category": "emergency_medical_care",
+    "query_text": "Mareez behosh ho jaye ya pasina aana band ho jaye toh fori emergency first aid aur hospital transfer kaise karein?"
+  },
+  {
+    "query_id": "KB_Q11",
+    "day": 2,
+    "language": "English",
+    "category": "child_safety",
+    "query_text": "Why should children and infants never be left unattended in parked vehicles even for a few minutes during summer?"
+  },
+  {
+    "query_id": "KB_Q12",
+    "day": 2,
+    "language": "Roman Urdu",
+    "category": "cooling_centers",
+    "query_text": "Karachi mein civil hospital aur JPMC mein heatstroke stabilization centers par kya sahuliyat dastiyab hoti hain?"
+  },
+  {
+    "query_id": "KB_Q13",
+    "day": 2,
+    "language": "English",
+    "category": "indoor_cooling",
+    "query_text": "How can residents keep indoor rooms cool without continuous air conditioning during daytime power outages?"
+  },
+  {
+    "query_id": "KB_Q14",
+    "day": 2,
+    "language": "Roman Urdu",
+    "category": "sea_breeze_cut_off",
+    "query_text": "Jab Karachi mein samandari hawa (sea breeze) ruk jaye aur humidity barh jaye toh heat index par kya asar parta hai?"
+  },
+  {
+    "query_id": "KB_Q15",
+    "day": 2,
+    "language": "English",
+    "category": "high_risk_groups",
+    "query_text": "Which chronic medical conditions heighten the mortality risk during sustained urban heatwave episodes?"
+  },
+  {
+    "query_id": "KB_Q16",
+    "day": 2,
+    "language": "Roman Urdu",
+    "category": "particulate_masks",
+    "query_text": "Industrial areas SITE aur Korangi mein safar kartay waqt N95 mask pehanna kiyun zaroori hai?"
+  },
+  {
+    "query_id": "KB_Q17",
+    "day": 2,
+    "language": "English",
+    "category": "sports_activities",
+    "query_text": "At what wet-bulb temperature or heat index threshold should outdoor sporting tournaments and cricket matches be halted?"
+  },
+  {
+    "query_id": "KB_Q18",
+    "day": 2,
+    "language": "Roman Urdu",
+    "category": "first_aid_hydration",
+    "query_text": "Agar kisi ko ulti ya gashti ka dora par jaye toh kya usko zabardasti pani pilana chahiye ya nahi?"
+  },
+  {
+    "query_id": "KB_Q19",
+    "day": 2,
+    "language": "English",
+    "category": "clothing_advice",
+    "query_text": "What type of clothing fabrics and head coverings provide the best thermal protection under direct solar radiation?"
+  },
+  {
+    "query_id": "KB_Q20",
+    "day": 2,
+    "language": "Roman Urdu",
+    "category": "emergency_contacts",
+    "query_text": "Karachi mein heatwave emergency ke doran Edhi 115 Chhipa 1020 aur Sindh Rescue 1122 par rabta kab karna chahiye?"
+  }
+]
+

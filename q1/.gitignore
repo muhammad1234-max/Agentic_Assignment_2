@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Environment and sensitive keys
+.env
+.env.local
+
+# Python cache and temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Raw response dumps with potential payload data
+data/raw_responses/*
+!data/raw_responses/.gitkeep
+
+# Operating system artifacts
+Thumbs.db
+.DS_Store
+
